@@ -13,7 +13,7 @@ gem 'jbuilder',     '2.7.0'
 
 group :development, :test do
   gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'byebug',  '9.0.6', platform: [:mri, :x64_mingw]
 end
 
 group :development do
