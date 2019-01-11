@@ -1,23 +1,16 @@
-development:
+default: &default
   adapter: postgresql
-  encoding: utf8
-  database: sample_app_development
-  pool: 5
+  encoding: unicode
+  host: db
   username: postgres
   password:
+  pool: 5
+
+development:
+  <<: *default
+  database: sample_app_development
+
 
 test:
-  adapter: postgresql
-  encoding: utf8
+  <<: *default
   database: sample_app_test
-  pool: 5
-  username: postgres
-  password:
-
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: sample_app_production
-  pool: 5
-  username: postgres
-  password:
